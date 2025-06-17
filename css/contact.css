@@ -1,0 +1,217 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+
+:root{
+    --main: #A020F0;
+    --purple: #4B0082;
+    --lightpurple: #E0BBFF;
+    --black: #1C1C1E;
+    --white: #D9D9D9;
+}
+
+.noto-sans-kr-{
+    font-family: "Noto Sans KR", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Noto Sans KR", sans-serif;
+    list-style: none;
+}
+
+body{
+    font-size: 1rem;
+    line-height: 1.75;
+    background-color: var(--black);
+    color: var(--white);
+}
+
+#loading{
+    display: grid;
+    place-items: center;
+    position: fixed;
+    width: 100%;
+    background: var(--black);
+    backdrop-filter: blur(1rem);
+    inset: 0;
+    z-index: 9;
+}
+
+#loading img{
+    width: 25%;
+    height: auto;
+}
+
+#header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    padding: 1rem 5rem;
+    background-color: var(--black);
+    z-index: 1;
+}
+
+.logo{
+    width: 10%;
+}
+
+.logo img{
+    width: 100%;
+    height: auto;
+}
+
+.menu ul{
+    display: flex;
+    gap: 2.5rem;
+}
+
+.menu a{
+    text-decoration: none;
+    font-size: 1.25rem;
+    font-weight: 900;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.menu a:hover{
+    color: var(--main);
+}
+
+.menu-btn{
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 7.5rem;
+    padding: 0.5rem 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 900;
+    background-color: var(--main);
+    border-radius: 1rem;
+    cursor: pointer;
+    transition: border-radius 0.3s ease;
+}
+
+.menu-btn:hover{
+    border-radius: 1rem 1rem 0 0;
+}
+
+.slide-menu{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 7.5rem;
+    text-align: center;
+    background-color: var(--main);
+    border-radius: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.menu-btn:hover .slide-menu{
+    border-radius: 0 0 1rem 1rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+.slide-menu li{
+    padding: 0.5rem 0;
+    border-top: 1px solid rgba(75, 0, 130, 0.5);
+}
+
+.slide-menu a{
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 900;
+    color: var(--white);
+    transition: color 0.3s ease;
+}
+
+.slide-menu a:hover{
+    color: var(--purple);
+}
+
+#contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2.5rem;
+}
+
+#contact h1{
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--main);
+}
+
+.contact-info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 2.5rem 0;
+    width: 50%;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.contact-info div{
+    width: 50%;
+}
+
+.contact-info a{
+    color: var(--white);
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width: 100%;
+    margin: 0.5rem;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background-color: var(--black);
+    border: 1px solid var(--purple);
+    border-radius: 1rem;   
+}
+
+.contact-form button{
+    padding: 0.75rem 2rem;
+    background-color: var(--main);
+    color: var(--white);
+    border: 0;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1.15rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover{
+    background-color: var(--purple);
+}
+
+footer{
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
